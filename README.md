@@ -13,9 +13,14 @@ Hypertap test written in python and pygame-ce. It tests how fast you can hyper t
 
 * You can use this score chart:
     10: Poor
+    
     15: Needs practice
+    
     20: Acceptable
+    
     25: Good
+    
     30: Great
+    
     35: Excellent
 __________________________________________________________
