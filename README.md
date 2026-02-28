@@ -12,6 +12,7 @@ Hypertap test written in python and pygame-ce. It tests how fast you can hyper t
 * The text on the left is how much time you've taken and the text on the right is how many times you tapped.
 
 * You can use this score chart:
+
     10: Poor
     
     15: Needs practice
