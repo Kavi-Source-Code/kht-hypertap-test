@@ -5,11 +5,12 @@ jumps = 0
 pygame.font.init()
 # A blocky, Zenithal-style font (from Grizzy and the Lemmings)
 font = pygame.font.Font("Fonts/ZENITHAL.ttf", 52)
+# A afterfont (made up word)
+afterfont = pygame.font.Font("Fonts/zombiecontrol.ttf", 50)
 def gravity(time, start_velocity=0, gravity=9.81):
     return start_velocity + gravity * time
 
 def jump(time, start_velocity=0, gravity=9.81, max_jump_time=0.16):
-    pygame.time.delay(100)  # Simulate the time taken for a jump
     if pygame.time.get_ticks() > max_jump_time:
         time = max_jump_time
     return start_velocity - gravity * time
@@ -73,7 +74,7 @@ if __name__ == "__main__":
         screen.fill((215, 215, 225)) 
         screen.blit(background, (0, 0))
         score = font.render(F"{jumps}", (0, 0, 0), True)
-        tt = font.render(F"{t}", (0, 120, 0), True)
+        tt = afterfont.render("%.2f" % (t / 1000), (0, 0, 0), True)
         screen.blit(tt, (56, 100))
         screen.blit(score, (200, 100))
         pygame.draw.rect(screen, (255, 0, 0), rect)
