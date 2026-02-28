@@ -7,9 +7,12 @@ pygame.font.init()
 font = pygame.font.Font("Fonts/ZENITHAL.ttf", 52)
 # A afterfont (made up word)
 afterfont = pygame.font.Font("Fonts/zombiecontrol.ttf", 50)
+
+# Gravity
 def gravity(time, start_velocity=0, gravity=9.81):
     return start_velocity + gravity * time
 
+# Jumping
 def jump(time, start_velocity=0, gravity=9.81, max_jump_time=0.16):
     if pygame.time.get_ticks() > max_jump_time:
         time = max_jump_time
